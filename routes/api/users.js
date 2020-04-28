@@ -33,7 +33,7 @@ router.post('/register', async ctx => {
         ctx.status = 500;
         ctx.body = {"email": "邮箱已被占用！"}
     } else {
-        const avatar = gravatar.url(email, {s: '200', r: 'pg', d: 'mm'},true);
+        const avatar = gravatar.url(email, {s: '200', r: 'pg', d: 'mm'},'https');
         const newUser = new User({
             name,
             email,

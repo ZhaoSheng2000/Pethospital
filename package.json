@@ -1,7 +1,6 @@
 {
   "name": "koa-app",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -21,5 +20,15 @@
     "mongoose": "^5.9.9",
     "nodemon": "^2.0.3",
     "passport-jwt": "^4.0.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZhaoSheng2000/koa-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ZhaoSheng2000/koa-app/issues"
+  },
+  "homepage": "https://github.com/ZhaoSheng2000/koa-app#readme",
+  "description": ""
 }
