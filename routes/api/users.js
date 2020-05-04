@@ -65,6 +65,7 @@ router.post('/register', async ctx => {
  */
 router.post('/login', async ctx => {
     //查询
+    console.log(ctx.request.body);
     const {email, password} = ctx.request.body;
     const findResult = await User.find({email});
     if (findResult.length === 0) {

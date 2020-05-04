@@ -19,6 +19,7 @@ require('./config/passport')(passport);
 
 //引入users.js
 const users = require('./routes/api/users');
+const timeline = require('./routes/api/users')
 
 //路由
 router.get("/",async ctx => {
@@ -40,6 +41,7 @@ mongoose.connect(db, { useNewUrlParser: true,useUnifiedTopology: true  })
 
 //配置路由地址:local:5000/api/users ===>users
 router.use('/api/users',users);
+router.use('/api/timeline',timeline)
 
 
 //配置路由
