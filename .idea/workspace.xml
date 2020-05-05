@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="241838d7-c36a-441f-ba7a-2a12c4acb84b" name="Default Changelist" comment="新增timeline测试接口">
-      <change afterPath="$PROJECT_DIR$/models/Timeline.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/node_modules/.bin/detect-libc" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/node_modules/.bin/gravatar" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/node_modules/.bin/is-ci" afterDir="false" />
@@ -2652,12 +2652,11 @@
       <change afterPath="$PROJECT_DIR$/node_modules/ylru/README.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/node_modules/ylru/index.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/node_modules/ylru/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/api/timeline.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/Timeline.js" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Timeline.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Timeline.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api/timeline.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/timeline.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -2693,19 +2692,68 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="13.3.0" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.mongoOptions" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/models" />
       <recent name="$PROJECT_DIR$" />
     </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000" />
+          <option name="urlPath" value="/api/timeline" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;userId:123&quot;,&quot;createTime&quot;:123}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000" />
+          <option name="urlPath" value="/api/timeline/newline" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;userId:123&quot;,&quot;createTime&quot;:123}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -2726,7 +2774,10 @@
       <workItem from="1587635692874" duration="119000" />
       <workItem from="1588068749397" duration="52000" />
       <workItem from="1588068878153" duration="1565000" />
-      <workItem from="1588074069949" duration="10550000" />
+      <workItem from="1588074069949" duration="11466000" />
+      <workItem from="1588589957100" duration="176000" />
+      <workItem from="1588590169371" duration="42000" />
+      <workItem from="1588590240807" duration="8537000" />
     </task>
     <task id="LOCAL-00001" summary="添加token鉴权的登录注册接口">
       <created>1587536883128</created>
@@ -2763,7 +2814,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588584376331</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="新增timeline测试接口">
+      <created>1588585574199</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1588585574199</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -2774,7 +2832,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -2791,10 +2851,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="104" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1587536495946" />
-    <state x="234" y="23" width="812" height="777" key="CommitChangelistDialog2" timestamp="1588585543263">
+    <state x="234" y="23" width="812" height="777" key="CommitChangelistDialog2" timestamp="1588585571602">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="234" y="23" width="812" height="777" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1588585543263" />
+    <state x="234" y="23" width="812" height="777" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1588585571602" />
     <state x="128" y="80" width="1024" height="640" key="DiffContextDialog" timestamp="1588585477495">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -2820,14 +2880,14 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="1238" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1587472497315" />
-    <state x="149" y="39" key="SettingsEditor" timestamp="1587454852100">
+    <state x="149" y="39" key="SettingsEditor" timestamp="1588671930178">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="149" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1587454852100" />
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1588584379042">
+    <state x="149" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1588671930178" />
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1588585577642">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1588584379042" />
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1588585577642" />
     <state x="449" y="140" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1587536677658">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
