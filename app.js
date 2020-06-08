@@ -19,7 +19,6 @@ require('./config/passport')(passport);
 
 //引入users.js
 const users = require('./routes/api/users');
-const timeline = require('./routes/api/timeline')
 
 //路由
 router.get("/",async ctx => {
