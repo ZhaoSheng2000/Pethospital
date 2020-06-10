@@ -24,11 +24,11 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ZhaoSheng2000/koa-app.git"
+    "url": "git+https://github.com/ZhaoSheng2000/koa2Demo.git"
   },
   "bugs": {
-    "url": "https://github.com/ZhaoSheng2000/koa-app/issues"
+    "url": "https://github.com/ZhaoSheng2000/koa2Demo/issues"
   },
-  "homepage": "https://github.com/ZhaoSheng2000/koa-app#readme",
+  "homepage": "https://github.com/ZhaoSheng2000/koa2Demo#readme",
   "description": ""
 }

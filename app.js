@@ -17,8 +17,9 @@ app.use(passport.session());
 //回调到config文件中passport.js
 require('./config/passport')(passport);
 
-//引入users.js
+//引入api
 const users = require('./routes/api/users');
+const admins = require('./routes/api/admins')
 
 //路由
 router.get("/",async ctx => {
@@ -38,9 +39,9 @@ mongoose.connect(db, { useNewUrlParser: true,useUnifiedTopology: true  })
         console.log(err)
 });
 
-//配置路由地址:local:5000/api/users ===>users
+//配置路由地址:localhost:5000/api/users ===>users
 router.use('/api/users',users);
-router.use('/api/timeline',timeline)
+router.use('/api/admin',admins)
 
 
 //配置路由
