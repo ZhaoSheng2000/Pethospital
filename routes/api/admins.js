@@ -138,5 +138,31 @@ router.post('/adddoctor',async ctx =>{
         ctx.body = {success:1,msg:'添加兽医资料成功'}
     }
 })
+/**
+* @method: POST
+* @route: api/admin/deldoctor
+* @desc: 删除兽医
+* @access: 公开
+*/
+router.post('/deldoctor',async ctx =>{
+    const {email} = ctx.request.body
+    const delResult = await Doctor.remove({email})
+        .catch(err =>{
+            console.error(err)
+        })
+    ctx.body = {data:delResult,msg:'删除兽医成功'}
+})
+/**
+* @method: POST
+* @route: api/admin/updoctor
+* @desc: 更新兽医信息
+* @access: public
+*/
+router.post('/updoctor',async ctx =>{
+    const {id,name,age,gender,email,label} = ctx.request.body
+    const result = await Doctor.updateOne({_id:id},{name,age,gender,email,label})
+    ctx.body = {success:1,msg:'更新兽医信息成功',data:result}
+})
+
 
 module.exports = router.routes();
