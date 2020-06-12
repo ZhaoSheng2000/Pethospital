@@ -18,6 +18,7 @@ const PetOwnerSchema = new Schema({
         type:String,
         required:true
     },
+    petid:Array,
     date:{
         type:Date,
         default: localDate

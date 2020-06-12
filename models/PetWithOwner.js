@@ -7,7 +7,7 @@ const PetWithOwnerSchema = new Schema({
         type:String,
         required:true
     },
-    pet:{
+    petid:{
         type:Array,
         required:true
     }

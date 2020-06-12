@@ -4,12 +4,15 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const keys = require('../../config/keys');
 const passport = require('koa-passport');
+const mongoose = require('mongoose')
+const ObjectId = mongoose.Types.ObjectId;
 
 
 //引入models
 const User = require("../../models/User");
 const PetOwner = require('../../models/PetOwner')
 const Pet = require('../../models/Pet')
+const Doctor = require('../../models/Doctor')
 
 function local(v) {
     const d = new Date(v || Date.now());
@@ -76,6 +79,47 @@ router.get('/current',
         }
     });
 /**
+ * @method: GET
+ * @route: api/users/getowners
+ * @desc: 获取宠物主人列表
+ * @access: public
+ */
+router.get('/getowners', async ctx => {
+    const result = await PetOwner.find()
+        .catch(err => {
+            console.error(err)
+        })
+    ctx.body = {data: result, msg: '获取宠物主人列表成功'}
+})
+/**
+ * @method: GET
+ * @route: api/users/doctors
+ * @desc: 获取医生列表
+ * @access: public
+ */
+router.get('/doctors', async ctx => {
+    const result = await Doctor.find()
+        .catch(err => {
+            console.error(err)
+        })
+    ctx.body = {data: result, msg: '获取医生列表成功'}
+})
+/**
+ * @method: POST
+ * @route: api/users/theowner
+ * @desc: 根据id获取宠物主人信息
+ * @access: public
+ */
+router.post('/theowner', async ctx => {
+    const {id} = ctx.request.body
+    const result = await PetOwner.find({_id: id})
+        .catch(err => {
+            console.error(err)
+        })
+    ctx.body = {data: result, msg: "根据id获取宠物主人信息成功"}
+})
+
+/**
  * @method: POST
  * @route: api/users/addowner
  * @desc: 添加宠物主人信息
@@ -114,7 +158,7 @@ router.post('/delownenr', async ctx => {
         .catch(err => {
             console.error(err)
         })
-    ctx.body = {data: result}
+    ctx.body = {data: result, msg: '删除主人信息成功'}
 })
 /**
  * @method: POST
@@ -142,15 +186,15 @@ router.post('/addpet', async ctx => {
         name,
         gender,
         type,
-        birth
+        birth,
     })
-    await newPet
+    const result = await newPet
         .save()
         .then()
         .catch(err => {
             console.error(err)
         })
-    ctx.body = {success: 1, msg: '添加宠物成功'}
+    ctx.body = {data: result, success: 1, msg: '添加宠物成功'}
 })
 /**
  * @method: POST
@@ -161,21 +205,83 @@ router.post('/addpet', async ctx => {
 router.post('/addvisit', async ctx => {
     const {id, time, remark} = ctx.request.body
     await Pet.updateOne(
-        {_id:id},
-        {$push: {visitRecords:{time,remark}}}
+        {_id: id},
+        {$push: {visitRecords: {time, remark}}}
     )
-        .catch(err =>{
+        .catch(err => {
             console.error(err)
         })
-    ctx.body = {success:1,msg:'添加就宠物访问记录成功'}
+    ctx.body = {success: 1, msg: '添加就宠物访问记录成功'}
 })
 /**
-* @method: POST
-* @route: api/users/uppet
-* @desc: 修改宠物信息
-* @access: public
-*/
-router.post('/uppet',async ctx =>{
-
+ * @method: POST
+ * @route: api/users/uppet
+ * @desc: 修改宠物信息
+ * @access: public
+ */
+router.post('/uppet', async ctx => {
+    const {id, name, gender, type, birth} = ctx.request.body
+    const result = await Pet.updateOne({_id: id}, {name, gender, type, birth})
+        .catch(err => {
+            console.error(err)
+        })
+    ctx.body = {data: result, msg: '更新宠物信息成功'}
+})
+/**
+ * @method: POST
+ * @route: api/users/delpet
+ * @desc: 删除宠物信息
+ * @access: public
+ */
+router.post('/delpet', async ctx => {
+    const {id} = ctx.request.body
+    const result = await Pet.remove({_id: id})
+        .catch(err => {
+            console.error(err)
+        })
+    ctx.body = {data: result, msg: '删除宠物信息成功'}
+})
+/**
+ * @method: POST
+ * @route: api/users/petwithowner
+ * @desc: 向主人添加宠物
+ * @access: public
+ */
+router.post('/petwithowner', async ctx => {
+    const {userid, petid} = ctx.request.body
+    const result = await PetOwner.updateOne(
+        {_id: userid},
+        {$push: {petid: petid}}
+    )
+        .catch(err => {
+            console.error(err)
+        })
+    ctx.body = {data: result, msg: '向主人添加宠物成功'}
+})
+/**
+ * @method: POST
+ * @route: api/users/ownerspets
+ * @desc: 根据主人_id获取主人所有宠物列表
+ * @access: ppublic
+ */
+router.post('/ownerspets', async ctx => {
+    const {id} = ctx.request.body
+    const result = await PetOwner.aggregate([
+        {
+            $match: {"_id": new ObjectId(id)}
+        },
+        {
+            $lookup: {
+                from: "pets",
+                localField: "petid",
+                foreignField: "id",
+                as: "petlist"
+            }
+        }
+    ])
+        .catch(err => {
+            console.error(err)
+        })
+    ctx.body = {data: result, msg: "根据主人id获取主人所有宠物列表成功"}
 })
 module.exports = router.routes();

@@ -38,6 +38,32 @@ router.post('/login',async ctx =>{
         }
     }
 })
+/**
+* @method: POST
+* @route: api/admin/getadmin
+* @desc: 获取管理员列表
+* @access: public
+*/
+router.get('/getadmin',async ctx =>{
+    const result = await Admin.find()
+        .catch(err =>{
+            console.error(err)
+        })
+    ctx.body = {data:result,msg:'获取管理员列表成功'}
+})
+/**
+ * @method: GET
+ * @route: api/admin/getusers
+ * @desc: 获取员工列表
+ * @access: public
+ */
+router.get('/getusers',async ctx =>{
+    const result = await User.find()
+        .catch(err =>{
+            console.error(err)
+        })
+    ctx.body = {data:result,msg:'获取员工列表成功'}
+})
 
 /**
 * @route: POST api/admin/addadmin
@@ -129,9 +155,6 @@ router.post('/adddoctor',async ctx =>{
         })
         await newDoctor
             .save()
-            .then((res) =>{
-                console.log(res)
-            })
             .catch(err =>{
                 console.log(err)
             })
