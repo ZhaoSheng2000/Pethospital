@@ -1,5 +1,5 @@
-# koa-app
-由koa创建的注册登录接口，包含了token鉴权
+# koa-app-Pethospital
+由koa创建的宠物医院接口，包含了token鉴权，私有化接口
 -----
 中间件
 - bcrypt
@@ -12,5 +12,7 @@
 - mongoose
 - nodemon
 - passport-jwt
+- uuid
 ------
-简单实现了登录注册接口，使用了`gravatar`来获取用户头像，`jsonwebtoken`鉴权私有化接口。
+实现了admin，user不同身份的权限api。
+接口文档见[api文档](https://www.showdoc.cc/zhaosheng?page_id=4682563889523350)
