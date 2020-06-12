@@ -14,5 +14,10 @@
 - passport-jwt
 - uuid
 ------
+导图：
+
+![1591963490271](https://tva1.sinaimg.cn/large/007S8ZIlly1gfprg9nexsj30u016gk2z.jpg)
+
 实现了admin，user不同身份的权限api。
 接口文档见[api文档](https://www.showdoc.cc/zhaosheng?page_id=4682563889523350)
+
