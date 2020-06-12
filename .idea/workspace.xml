@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="241838d7-c36a-441f-ba7a-2a12c4acb84b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Pet.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Pet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/PetOwner.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/PetOwner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/PetWithOwner.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/PetWithOwner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/admins.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/admins.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +136,7 @@
       <workItem from="1588590240807" duration="8537000" />
       <workItem from="1591587269905" duration="33052000" />
       <workItem from="1591872113957" duration="11446000" />
-      <workItem from="1591940451253" duration="6802000" />
+      <workItem from="1591940451253" duration="8646000" />
     </task>
     <task id="LOCAL-00001" summary="添加token鉴权的登录注册接口">
       <created>1587536883128</created>
@@ -207,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591871198119</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="完成相关接口">
+      <created>1591957774155</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1591957774155</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,7 +234,8 @@
     <MESSAGE value="init" />
     <MESSAGE value="新增admin相关接口" />
     <MESSAGE value="完成admin接口，新增user相关接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成admin接口，新增user相关接口" />
+    <MESSAGE value="完成相关接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成相关接口" />
   </component>
   <component name="WindowStateProjectService">
     <state x="377" y="248" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1591700390110">
@@ -248,10 +250,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="378" y="154" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.800@0.0.1280.800" timestamp="1591587349935" />
-    <state x="387" y="23" width="812" height="777" key="CommitChangelistDialog2" timestamp="1591871197813">
+    <state x="387" y="23" width="812" height="777" key="CommitChangelistDialog2" timestamp="1591957773759">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="387" y="23" width="812" height="777" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1591871197813" />
+    <state x="387" y="23" width="812" height="777" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1591957773759" />
     <state x="128" y="80" width="1024" height="640" key="DiffContextDialog" timestamp="1591587448292">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -281,10 +283,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="261" y="78" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1591700393386" />
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1591871200331">
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1591957775748">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1591871200331" />
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1591957775748" />
     <state x="449" y="140" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1587536677658">
       <screen x="0" y="0" width="1280" height="800" />
     </state>

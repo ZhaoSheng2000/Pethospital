@@ -197,6 +197,21 @@ router.post('/addpet', async ctx => {
     ctx.body = {data: result, success: 1, msg: '添加宠物成功'}
 })
 /**
+* @method: GET
+* @route: api/users/getpets
+* @desc: 获取宠物列表
+* @access: public
+*/
+router.get('/getpets',async ctx =>{
+    const result = await Pet.find()
+        .catch(err =>{
+            console.error(err)
+        })
+    ctx.body = {data:result,msg:'获取宠物列表成功'}
+})
+
+
+/**
  * @method: POST
  * @route: api/users/addpetlog
  * @desc: 添加宠物访问记录
