@@ -14,11 +14,6 @@ const PetOwner = require('../../models/PetOwner')
 const Pet = require('../../models/Pet')
 const Doctor = require('../../models/Doctor')
 
-function local(v) {
-    const d = new Date(v || Date.now());
-    d.setMinutes(d.getMinutes() - d.getTimezoneOffset());
-    return d.toISOString();
-}
 
 /**
  * @route GET api/users/test
@@ -40,8 +35,8 @@ router.post('/login', async ctx => {
     const {email, password} = ctx.request.body;
     const findResult = await User.find({email});
     if (findResult.length === 0) {
-        ctx.status = 404;
-        ctx.body = {msg: "用户不存在！"}
+        ctx.status = 200;
+        ctx.body = {msg: "用户不存在！",success:2}
     } else {
         const result = bcrypt.compareSync(password, findResult[0].password); // true
         if (result) {
@@ -50,11 +45,11 @@ router.post('/login', async ctx => {
             const token = jwt.sign(payload, keys.secretOrkey, {expiresIn: 3600});
             const userId = findResult[0]._id
             await User.updateOne(
-                {_id: findResult[0]._id},
-                {$push: {userlog: local()}}
+                {_id: userId},
+                {$push: {userlog:Date.now()}}
             )
             ctx.status = 200;
-            ctx.body = {success: 1, token: "Bearer " + token, userId: userId}
+            ctx.body = {success: 1, token: "Bearer " + token, name:findResult[0].name,id:findResult[0]._id}
         } else {
             ctx.body = {success: 0, msg: '密码错误！'}
         }
@@ -152,13 +147,13 @@ router.post('/addowner', async ctx => {
  * @access: public
  */
 
-router.post('/delownenr', async ctx => {
-    const {phone} = ctx.request.body
-    const result = await PetOwner.remove({phone})
+router.post('/delowner', async ctx => {
+    const {id} = ctx.request.body
+    const result = await PetOwner.remove({_id:id})
         .catch(err => {
             console.error(err)
         })
-    ctx.body = {data: result, msg: '删除主人信息成功'}
+    ctx.body = {success:1,data: result, msg: '删除主人信息成功'}
 })
 /**
  * @method: POST
@@ -168,11 +163,11 @@ router.post('/delownenr', async ctx => {
  */
 router.post('/upowner', async ctx => {
     const {id, name, gender, phone} = ctx.request.body
-    const result = await User.updateOne({_id: id}, {name, gender, phone})
+    const result = await PetOwner.updateOne({_id: id}, {name, gender, phone})
         .catch(err => {
             console.error(err)
         })
-    ctx.body = {data: result, msg: '更新主人信息成功'}
+    ctx.body = {success:1,data: result, msg: '更新主人信息成功'}
 })
 /**
  * @method: POST
@@ -209,7 +204,20 @@ router.get('/getpets',async ctx =>{
         })
     ctx.body = {data:result,msg:'获取宠物列表成功'}
 })
-
+/**
+* @method: POST
+* @route: api/users/getthepet
+* @desc: 获取某一宠物
+* @access: publis
+*/
+router.post('/getthepet',async ctx =>{
+    const {id} = ctx.request.body
+    const result = await Pet.find({_id:id})
+        .catch(err =>{
+            console.error(err)
+        })
+    ctx.body = {data:result}
+})
 
 /**
  * @method: POST
@@ -218,7 +226,8 @@ router.get('/getpets',async ctx =>{
  * @access: public
  */
 router.post('/addvisit', async ctx => {
-    const {id, time, remark} = ctx.request.body
+    const {id, remark} = ctx.request.body
+    const time = Date.now()
     await Pet.updateOne(
         {_id: id},
         {$push: {visitRecords: {time, remark}}}
@@ -291,6 +300,11 @@ router.post('/ownerspets', async ctx => {
                 localField: "petid",
                 foreignField: "id",
                 as: "petlist"
+            }
+        },
+        {
+            $project:{
+                petlist:1
             }
         }
     ])

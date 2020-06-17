@@ -3,6 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="241838d7-c36a-441f-ba7a-2a12c4acb84b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Doctor.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Doctor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Pet.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Pet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/PetOwner.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/PetOwner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api/admins.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/admins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/users.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,6 +144,10 @@
       <workItem from="1591587269905" duration="33052000" />
       <workItem from="1591872113957" duration="11446000" />
       <workItem from="1591940451253" duration="8794000" />
+      <workItem from="1591963630744" duration="119000" />
+      <workItem from="1591968184047" duration="4039000" />
+      <workItem from="1592180309816" duration="119000" />
+      <workItem from="1592217863559" duration="14560000" />
     </task>
     <task id="LOCAL-00001" summary="添加token鉴权的登录注册接口">
       <created>1587536883128</created>
@@ -214,11 +226,25 @@
       <option name="project" value="LOCAL" />
       <updated>1591963404117</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="更新文档">
+      <created>1591963654093</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1591963654093</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../antdpro/node_modules/cross-port-killer/test/test.js" />
+        <option value="$PROJECT_DIR$/../antdpro/node_modules/cross-port-killer/test/test.d.ts" />
+        <option value="$PROJECT_DIR$/../antdpro/node_modules/umi-utils/src/index.d.ts" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -242,7 +268,8 @@
     <MESSAGE value="完成admin接口，新增user相关接口" />
     <MESSAGE value="完成相关接口" />
     <MESSAGE value="完善users接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善users接口" />
+    <MESSAGE value="更新文档" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新文档" />
   </component>
   <component name="WindowStateProjectService">
     <state x="377" y="248" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1591700390110">
@@ -257,10 +284,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="378" y="154" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.800@0.0.1280.800" timestamp="1591587349935" />
-    <state x="387" y="23" width="812" height="777" key="CommitChangelistDialog2" timestamp="1591963403936">
+    <state x="387" y="23" width="812" height="777" key="CommitChangelistDialog2" timestamp="1591963653905">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="387" y="23" width="812" height="777" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1591963403936" />
+    <state x="387" y="23" width="812" height="777" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1591963653905" />
     <state x="128" y="80" width="1024" height="640" key="DiffContextDialog" timestamp="1591587448292">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -290,10 +317,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="261" y="78" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1591700393386" />
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1591963406021">
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1591963656509">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1591963406021" />
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1591963656509" />
     <state x="449" y="140" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1587536677658">
       <screen x="0" y="0" width="1280" height="800" />
     </state>

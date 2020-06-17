@@ -32,7 +32,7 @@ router.post('/login',async ctx =>{
         const result = bcrypt.compareSync(password,findresult[0].password)
         if (result){
             ctx.status = 200
-            ctx.body = {success:1,msg:'登录成功！'}
+            ctx.body = {success:1,data:findresult,msg:'登录成功！'}
         }else {
             ctx.body = {success:0,msg:'密码错误！'}
         }
@@ -63,6 +63,20 @@ router.get('/getusers',async ctx =>{
             console.error(err)
         })
     ctx.body = {data:result,msg:'获取员工列表成功'}
+})
+/**
+* @method: POST
+* @route: api/admin/theuser
+* @desc: 获取某一员工
+* @access: public
+*/
+router.post('/theuser',async ctx =>{
+    const{id} = ctx.request.body
+    const result = await User.find({_id:id})
+        .catch(err =>{
+            console.error(err)
+        })
+    ctx.body = {data:result,success:0}
 })
 
 /**
@@ -128,8 +142,8 @@ router.post('/adduser',async ctx =>{
 * @access: 公开
 */
 router.post('/deluser',async ctx =>{
-    const{email} = ctx.request.body
-    const delResult = await User.remove({email})
+    const{id} = ctx.request.body
+    const delResult = await User.remove({_id:id})
     ctx.body = {msg:delResult}
 })
 /**
@@ -139,7 +153,7 @@ router.post('/deluser',async ctx =>{
 * @access: 公开
 */
 router.post('/adddoctor',async ctx =>{
-    const {name,age,gender,email,label} = ctx.request.body
+    const {name,age,email,label} = ctx.request.body
     const findResult = await Doctor.find({email})
     if (findResult.length > 0){
         ctx.body = {success:0,message:'邮箱已被占用'}
@@ -148,7 +162,6 @@ router.post('/adddoctor',async ctx =>{
         const newDoctor = new Doctor({
             name,
             age,
-            gender,
             email,
             avatar,
             label
@@ -168,8 +181,8 @@ router.post('/adddoctor',async ctx =>{
 * @access: 公开
 */
 router.post('/deldoctor',async ctx =>{
-    const {email} = ctx.request.body
-    const delResult = await Doctor.remove({email})
+    const {id} = ctx.request.body
+    const delResult = await Doctor.remove({_id:id})
         .catch(err =>{
             console.error(err)
         })
@@ -182,8 +195,8 @@ router.post('/deldoctor',async ctx =>{
 * @access: public
 */
 router.post('/updoctor',async ctx =>{
-    const {id,name,age,gender,email,label} = ctx.request.body
-    const result = await Doctor.updateOne({_id:id},{name,age,gender,email,label})
+    const {id,name,age,label} = ctx.request.body
+    const result = await Doctor.updateOne({_id:id},{name,age,label})
     ctx.body = {success:1,msg:'更新兽医信息成功',data:result}
 })
 

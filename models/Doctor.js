@@ -11,10 +11,6 @@ const DoctorSchema = new Schema({
         type:Number,
         required:true
     },
-    gender:{
-        type:Number,
-        required:true
-    },
     email:{
         type:String,
         required:true
@@ -24,6 +20,10 @@ const DoctorSchema = new Schema({
     },
     label:{
         type:Array,
+    },
+    date:{
+        type:Date,
+        default:Date.now
     }
 });
 

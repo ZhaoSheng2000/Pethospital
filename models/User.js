@@ -25,7 +25,7 @@ const UserSchema = new Schema({
     },
     date:{
         type:Date,
-        default: localDate
+        default: Date.now
     },
     userlog:{
         type:Array

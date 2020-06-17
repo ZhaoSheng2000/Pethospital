@@ -47,7 +47,7 @@ router.use('/api/admin',admins)
 //配置路由
 app.use(router.routes()).use(router.allowedMethods());
 
-const port =  process.env.PORT || 5000;
+const port =  process.env.PORT || 5001;
 
 app.listen(port, ()=>{
     console.log(`server started on ${port}`)
