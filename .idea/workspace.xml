@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="241838d7-c36a-441f-ba7a-2a12c4acb84b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mongoSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mongoSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Doctor.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Doctor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Pet.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Pet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/PetOwner.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/PetOwner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/admins.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/admins.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/users.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,20 +42,23 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="13.3.0" />
+    <property name="javascript.nodejs.core.library.configured.version" value="10.16.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="10.17.30" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="OPEN_URL_DIALOG">
@@ -118,6 +117,7 @@
       </list>
     </option>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -148,6 +148,10 @@
       <workItem from="1591968184047" duration="4039000" />
       <workItem from="1592180309816" duration="119000" />
       <workItem from="1592217863559" duration="14560000" />
+      <workItem from="1599571413926" duration="2176000" />
+      <workItem from="1599608171380" duration="1137000" />
+      <workItem from="1599629017924" duration="660000" />
+      <workItem from="1599629699109" duration="758000" />
     </task>
     <task id="LOCAL-00001" summary="添加token鉴权的登录注册接口">
       <created>1587536883128</created>
@@ -237,27 +241,19 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/../antdpro/node_modules/cross-port-killer/test/test.js" />
-        <option value="$PROJECT_DIR$/../antdpro/node_modules/cross-port-killer/test/test.d.ts" />
-        <option value="$PROJECT_DIR$/../antdpro/node_modules/umi-utils/src/index.d.ts" />
-      </list>
-    </option>
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="添加Timeline模型" />
@@ -272,14 +268,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="更新文档" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="970" y="521" key="#Custom_Plugin_Repositories" timestamp="1599607707286">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="970" y="521" key="#Custom_Plugin_Repositories/0.0.1920.1050@0.0.1920.1050" timestamp="1599607707286" />
+    <state x="920" y="276" key="#HTTP_Proxy" timestamp="1599607710334">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="920" y="276" key="#HTTP_Proxy/0.0.1920.1050@0.0.1920.1050" timestamp="1599607710334" />
     <state x="377" y="248" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1591700390110">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="377" y="248" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.0.1280.800@0.0.1280.800" timestamp="1591700390110" />
-    <state x="104" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587536495946">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="104" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1587536495946" />
     <state x="378" y="154" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591587349935">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -292,46 +292,28 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="128" y="80" key="DiffContextDialog/0.0.1280.800@0.0.1280.800" timestamp="1591587448292" />
-    <state x="128" y="80" width="1024" height="640" key="DiffContextDialog/0.23.1280.777@0.23.1280.777" timestamp="1588585477495" />
-    <state x="507" y="300" key="Github.ShareDialog" timestamp="1587536414344">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="928" y="299" key="FileChooserDialogImpl" timestamp="1599608148129">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="507" y="300" key="Github.ShareDialog/0.0.1280.800@0.0.1280.800" timestamp="1587536414344" />
-    <state width="1238" height="212" key="GridCell.Tab.0.bottom" timestamp="1587472497316">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1587472497316" />
-    <state width="1238" height="212" key="GridCell.Tab.0.center" timestamp="1587472497315">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1587472497315" />
-    <state width="1238" height="212" key="GridCell.Tab.0.left" timestamp="1587472497314">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1587472497314" />
-    <state width="1238" height="212" key="GridCell.Tab.0.right" timestamp="1587472497315">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1587472497315" />
-    <state x="261" y="78" key="SettingsEditor" timestamp="1591700393386">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="928" y="299" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1599608148129" />
+    <state x="735" y="272" width="1133" height="712" key="SettingsEditor" timestamp="1599630126999">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="261" y="78" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1591700393386" />
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1591963656509">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="735" y="272" width="1133" height="712" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1599630126999" />
+    <state x="360" y="184" key="Vcs.Push.Dialog.v2" timestamp="1599630451504">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1591963656509" />
-    <state x="449" y="140" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1587536677658">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="449" y="140" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1280.800@0.0.1280.800" timestamp="1587536677658" />
-    <state x="305" y="185" key="run.anything.popup" timestamp="1591671422915">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="360" y="184" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1599630451504" />
+    <state x="458" y="243" key="run.anything.popup" timestamp="1599607508044">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="305" y="185" key="run.anything.popup/0.0.1280.800@0.0.1280.800" timestamp="1591671422915" />
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1588584585541">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="458" y="243" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1599607508044" />
+    <state x="794" y="250" width="672" height="678" key="search.everywhere.popup" timestamp="1599608209616">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1588584585541" />
+    <state x="794" y="250" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1599608209616" />
   </component>
 </project>

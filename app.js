@@ -23,7 +23,7 @@ const admins = require('./routes/api/admins')
 
 //路由
 router.get("/",async ctx => {
-    ctx.body = {msg: "Hello Koa Interfaces"};
+    ctx.body = {msg: "Hello Koa Interfaces(pethospital)"};
     console.log()
 });
 
@@ -38,12 +38,9 @@ mongoose.connect(db, { useNewUrlParser: true,useUnifiedTopology: true  })
     .catch(err=>{
         console.log(err)
 });
-
 //配置路由地址:localhost:5000/api/users ===>users
 router.use('/api/users',users);
 router.use('/api/admin',admins)
-
-
 //配置路由
 app.use(router.routes()).use(router.allowedMethods());
 

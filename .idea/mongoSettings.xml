@@ -4,7 +4,7 @@
     <option name="serverConfigurations">
       <list>
         <ServerConfiguration>
-          <option name="label" value="db1" />
+          <option name="label" value="koa" />
           <option name="serverUrls">
             <list>
               <option value="localhost:27017" />
