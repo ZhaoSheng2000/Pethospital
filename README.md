@@ -1,5 +1,5 @@
 # koa-app-Pethospital
-由koa创建的宠物医院接口，包含了token鉴权，私有化接口
+由koa创建的宠物医院接口，包含了token鉴权，私有化接口（前端部分见[宠物医院](https://github.com/ZhaoSheng2000/pethospital-react)）
 -----
 中间件
 - bcrypt
